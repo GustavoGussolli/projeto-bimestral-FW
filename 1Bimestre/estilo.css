@@ -44,28 +44,30 @@
 }
 
 body {
-    background-color: #f0f8ff;
+    background-color: #f9fafb;
 }
 
 #cabecalho {
-    background-color: #1E90FF;
+    background-color: #4f46e5;
     color: white;
 }
 
 .btn-primary {
-    background-color: #0000FF;
-    border-color: #0000FF;
+    background-color: #6366f1;
+    border-color: #6366f1;
 }
 
 .btn-secondary {
-    background-color: #ADD8E6;
-    border-color: #ADD8E6; 
+    background-color: #e0e7ff;
+    border-color: #e0e7ff;
 }
 
 h1 {
-    color: #00008B; 
+    color: #3730a3;
 }
 
 .container {
-    background-color: #E6F7FF;
+    background-color: #f3f4f6;
 }
+
+
