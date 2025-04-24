@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>PageMaker</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="funcoes.js"></script>
+
+    <link href="estilo.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <div id="cabecalho" class="mb-3">
+
+        <button class="btn btn-primary" onclick="mostraOcultaDiv('containerCod'), gerarCodigo()">Gerar código</button>
+
+        <button class="btn btn-secondary" onclick="mostraOcultaDiv('containerPreview'), renderIframe()">Visualizar página</button>
+
+    </div>
+
+
+    <div class="container">
+
+        <div id="containerForm" class="form-group">
+
+            <h1>Arquivo HTML</h1>
+
+            Nome do arquivo HTML
+
+            <input type="text" id="nomeHTML" name="nomeHTML" class="form-control" required><br>
+
+
+            <h1>Cabeçalho</h1>
+
+            Cor de fundo
+
+            <select id="corFundo" name="corFundo" class="form-control" required>
+
+                <option>--</option>
+
+                <option value="#FF0000" style="background-color: #FF0000; color: white;">Vermelho</option>
+
+                <option value="#00FF00" style="background-color: #00FF00;">Verde</option>
+
+                <option value="#0000FF" style="background-color: #0000FF; color: white;">Azul</option>
+
+                <option value="#FFFF00" style="background-color: #FFFF00;">Amarelo</option>
+
+                <option value="#FFA500" style="background-color: #FFA500;">Laranja</option>
+
+                <option value="#800080" style="background-color: #800080; color: white;">Roxo</option>
+
+            </select><br>
+
+            Texto para cabeçalho
+
+            <input type="text" id="textoCabecalho" name="textoCabecalho" class="form-control" required><br>
+
+            Cor da Fonte
+
+            <select id="corFonte" name="corFonte" class="form-control" required>
+
+                <option>--</option>
+
+                <option value="#FF0000" style="background-color: #FF0000; color: white;">Vermelho</option>
+
+                <option value="#00FF00" style="background-color: #00FF00;">Verde</option>
+
+                <option value="#0000FF" style="background-color: #0000FF; color: white;">Azul</option>
+
+                <option value="#FFFF00" style="background-color: #FFFF00;">Amarelo</option>
+
+                <option value="#FFA500" style="background-color: #FFA500;">Laranja</option>
+
+                <option value="#800080" style="background-color: #800080; color: white;">Roxo</option>
+
+            </select><br>
+
+            Tamanho Fonte
+
+            <select id="tamFonte" name="tamFonte" class="form-control" required>
+
+                <option>--</option>
+
+                <option value="12">12</option>
+
+                <option value="13">13</option>
+
+                <option value="14">14</option>
+
+                <option value="15">15</option>
+
+                <option value="16">16</option>
+
+                <option value="17">17</option>
+
+            </select><br>
+
+
+            <h1>Links</h1>
+
+            Texto para os links<br>
+
+            Esta página não tem Links
+
+            <input type="checkbox" id="noLinks" onclick="removeLinks(this)"><br>
+
+            <div id="areaLinks">
+
+                Cor do link
+
+                <select id="corLinks" name="corLinks" class="form-control">
+
+                    <option>--</option>
+
+                    <option value="#FF0000" style="background-color: #FF0000; color: white;">Vermelho</option>
+
+                    <option value="#00FF00" style="background-color: #00FF00;">Verde</option>
+
+                    <option value="#0000FF" style="background-color: #0000FF; color: white;">Azul</option>
+
+                    <option value="#FFFF00" style="background-color: #FFFF00;">Amarelo</option>
+
+                    <option value="#FFA500" style="background-color: #FFA500;">Laranja</option>
+
+                    <option value="#800080" style="background-color: #800080; color: white;">Roxo</option>
+
+                </select><br>
+
+                Estilo do link<br>
+
+                Sublinhado<input type="radio" name="estiloLinks" value="1"><br>
+
+                Não Sublinhado<input type="radio" name="estiloLinks" value="0"><br>
+
+                <input type="text" name="links" placeholder="link1" class="form-control">
+
+                <input type="file" name="href" onclick="aviso()">
+
+                <button class="btn btn-primary" onclick="criarLinks()">+</button><br>
+
+            </div>
+
+
+            <h1>Conteúdo</h1><br>
+
+            <textarea id="txtConteudo" cols="50" rows="10" class="form-control" required></textarea><br>
+
+            imagem: <input type="file" id="imagem" class="form-control" required><br>
+
+            Largura: <input type="number" id="largura" required>
+
+            Altura: <input type="number" id="altura" required>
+
+            <hr>
+
+        </div>
+
+
+        <div id="containerCodPreview">
+
+            <div id="containerPreview" class="content">
+
+                <iframe id="pagina"></iframe>
+
+            </div>
+
+
+            <div id="containerCod" class="content active">
+
+                <h1>HTML</h1>
+
+                <textarea cols="100" rows="10" id="codeHTML" class="form-control"></textarea><br>
+
+                <button class="btn btn-success" onclick="download('codeHTML','')">Download do código</button>
+
+
+                <h1>CSS</h1>
+
+                <textarea id="codeCSS" cols="100" rows="10" class="form-control"></textarea><br>
+
+                <button class="btn btn-success" onclick="download('codeCSS','estilo.css')">Download do código</button><br>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

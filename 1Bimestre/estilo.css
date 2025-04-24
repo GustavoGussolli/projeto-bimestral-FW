@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+}
+
+#containerForm {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#containerCodPreview {
+    width: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.content {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.active {
+    display: block;
+}
+
+#altura, #largura {
+    width: 40px;
+}
+
+#pagina {
+    width: 100%;
+    height: 100%;
+}
+
+#altura, #largura {
+    width: 60px;
+}
+
+body {
+    background-color: #f0f8ff;
+}
+
+#cabecalho {
+    background-color: #1E90FF;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #0000FF;
+    border-color: #0000FF;
+}
+
+.btn-secondary {
+    background-color: #ADD8E6;
+    border-color: #ADD8E6; 
+}
+
+h1 {
+    color: #00008B; 
+}
+
+.container {
+    background-color: #E6F7FF;
+}
